@@ -1,0 +1,132 @@
+
+/* carousel */
+.carousel {
+    width: 80%;
+    overflow-x: auto;
+    margin: 1em auto;
+    border-radius: var(--border-radius-normal);
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    padding: .5em 0 .5em .5em;
+}
+
+.carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* scroll button */
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+    border: none;
+    background-color: var(--color-text);
+    font-family: Consolas;
+    font-size: 3rem;
+    color: var(--color-bg);
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    padding-bottom: .2em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+}
+
+.carousel::scroll-button(right) {
+    content: ">";
+    position-area: right center;
+    translate: 1em;
+}
+
+.carousel::scroll-button(left) {
+    content: "<";
+    position-area: left center;
+    translate: -1em;
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled,
+.carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
+    opacity: .5;
+    cursor: pointer;
+    transition: var(--transition-time-normal);
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+    cursor: auto;
+}
+
+
+/* carousel cards */
+.card {
+    scroll-snap-align: start;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    flex: 0 0 10vw;
+    height: 10vw;
+    aspect-ratio: 5 / 3;
+    transition: var(--transition-time-normal);
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: var(--transition-time-normal);
+}
+
+/* overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.1);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* overlay image */
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* for Handy */
+@media(max-width: 700px) {
+    .card {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .card:hover {
+        transform: scale(1);
+    }
+
+    .carousel::scroll-button(right) {
+        translate: -.5em;
+    }
+
+    .carousel::scroll-button(left) {
+        translate: .5em;
+    }
+}
