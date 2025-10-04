@@ -122,6 +122,7 @@
         height: 3.5rem;
         width: 3.5rem;
         font-size: 3rem;
+        padding-bottom: 0;
     }
 
     .carousel::scroll-button(right) {
@@ -134,5 +135,9 @@
 
     .carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
         opacity: 1;
+    }
+
+    .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+        opacity: .5;
     }
 }
