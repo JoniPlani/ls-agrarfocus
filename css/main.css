@@ -74,7 +74,7 @@ address {
     text-decoration: none;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: .1vw;
+    font-size: clamp(.1rem, calc(1vw + .5rem), 2rem);
 }
 
 .header .side-links, .header .social-links {
@@ -173,4 +173,3 @@ address {
         margin-top: 1em;
     }
 }
-
