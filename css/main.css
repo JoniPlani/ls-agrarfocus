@@ -87,7 +87,8 @@ address {
 }
 
 .header img {
-    height: 2rem;
+    height: clamp(.1rem, calc(2vw + .5rem), 2rem);
+    vertical-align: middle;
 }
 
 .social-links {
