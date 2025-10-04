@@ -51,6 +51,10 @@
     translate: -1em;
 }
 
+.carousel::scroll-button(right):focus, .carousel::scroll-button(left):focus {
+    opacity: 1;
+}
+
 .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled,
 .carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
     opacity: .5;
