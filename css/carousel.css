@@ -13,12 +13,6 @@
     padding: .5em 0 .5em .5em;
 }
 
-.carousel::scroll-marker-group {
-    display: flex;
-    justify-content: center;
-    gap: .5em;
-}
-
 .carousel::-webkit-scrollbar {
     display: none;
 }
@@ -28,10 +22,12 @@
     border: none;
     background-color: var(--color-text);
     font-family: Consolas;
-    font-size: 3rem;
+    font-size: 3vw;
+    text-align: center;
+    vertical-align: middle;
     color: var(--color-bg);
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 4vw;
+    width: 4vw;
     border-radius: 50%;
     padding-bottom: .2em;
     cursor: pointer;
@@ -42,17 +38,13 @@
 .carousel::scroll-button(right) {
     content: ">";
     position-area: right center;
-    translate: 1em;
+    translate: 1vw;
 }
 
 .carousel::scroll-button(left) {
     content: "<";
     position-area: left center;
-    translate: -1em;
-}
-
-.carousel::scroll-button(right):focus, .carousel::scroll-button(left):focus {
-    opacity: 1;
+    translate: -1vw;
 }
 
 .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled,
@@ -126,11 +118,21 @@
         transform: scale(1);
     }
 
+    .carousel::scroll-button(right), .carousel::scroll-button(left) {
+        height: 3.5rem;
+        width: 3.5rem;
+        font-size: 3rem;
+    }
+
     .carousel::scroll-button(right) {
         translate: -.5em;
     }
 
     .carousel::scroll-button(left) {
         translate: .5em;
+    }
+
+    .carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
+        opacity: 1;
     }
 }
