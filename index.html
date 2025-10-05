@@ -35,43 +35,54 @@
 
         </header>
 
-        <!-- background -->
-        <div class="background"></div>
+        <!-- content -->
+        <main>
 
-        <!-- Vorstellung -->
-        <h1>Lorem Ipsum</h1>
+            <!-- background -->
+            <div class="background"></div>
 
-        <div class="half" style="margin: 0 10vw 0 10vw; box-sizing: border-box; gap: 10vw;">
+            <!-- Vorstellung -->
+            <h1>Lorem Ipsum</h1>
 
-            <p style="margin: auto 0 auto 0">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
-                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
-                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
-                et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor 
-                sit amet.
-            </p>
+            <div class="half" style="margin: 0 10vw 0 10vw; box-sizing: border-box; gap: 10vw;">
 
-            <img src="./image/example.png" alt="" style="width: 100%;">
+                <p style="margin: auto 0 auto 0">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
+                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
+                    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor 
+                    sit amet.
+                </p>
 
-        </div>
+                <img src="./image/example.png" alt="" style="width: 100%;">
 
-        <h1>Lorem Ipsum</h1>
+            </div>
 
-        <!-- carousel -->
-        <div class="carousel">
+            <h1>Lorem Ipsum</h1>
 
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
-            <img src="./image/example.png" alt="" class="card" loading="lazy">
+            <!-- carousel -->
+            <div class="carousel">
 
-        </div>
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+                <img src="./image/example.png" alt="" class="card" loading="lazy">
+
+            </div>
+
+            <!-- overlay -->
+            <div class="overlay" id="overlay">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <img id="overlayImg" src="">
+            </div>
+        
+        </main>
 
         <!-- footer -->
         <footer class="footer">
@@ -96,12 +107,6 @@
 
         </div>
         </footer>
-
-        <!-- overlay -->
-        <div class="overlay" id="overlay">
-            <span class="close-btn" id="closeBtn">&times;</span>
-            <img id="overlayImg" src="">
-        </div>
 
         <script>
             const thumbnails = document.querySelectorAll(".card");
