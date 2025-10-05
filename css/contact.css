@@ -29,11 +29,13 @@
     overflow: hidden;
     accent-color: var(--color-text);
     margin-top: 0;
+    transition: var(--transition-time-normal) ease;
 }
 
 .contact input[type="submit"] {
     background-color: var(--color-accent);
-    opacity: .6;
+    opacity: var(--opacity-transparancy-normal);
+    transition: var(--transition-time-normal) ease;
 }
 
 .contact input[type="submit"]:hover {
