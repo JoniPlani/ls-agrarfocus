@@ -8,12 +8,15 @@
     --font-size: 16;
 
     --border-radius-normal: .5em;
+
+    --opacity-transparancy-normal: .5;
 }
 
 html {
     font-family: Sans-serif;
     font: Helvetica;
     font-size: var(--font-size);
+    height: 100%;
 }
 
 body {
@@ -21,6 +24,15 @@ body {
     color: var(--color-text);
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* main */
+main {
+    flex: 1;
+    margin-top: 3em;
 }
 
 h1 {
@@ -42,10 +54,12 @@ img {
 a {
     color: var(--color-text);
     text-decoration: underline;
+    transition: var(--transition-time-normal) ease;
 }
 
 a:hover {
-    opacity: .3;
+    opacity: var(--opacity-transparancy-normal);
+    text-decoration: none;
     transition: var(--transition-time-normal) ease;
 }
 
@@ -61,8 +75,10 @@ address {
     display: grid;
     z-index: 100;
     grid-template-columns: 1fr max-content;
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     padding: .5em;
     margin: 0;
     background-color: var(--color-accent);
@@ -171,5 +187,9 @@ address {
 
     .footer .social-links {
         margin-top: 1em;
+    }
+
+    main {
+        margin-top: 5vh;
     }
 }
