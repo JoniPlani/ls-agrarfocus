@@ -46,4 +46,10 @@
     font-size: 40px;
     color: white;
     cursor: pointer;
+    transition: var(--transition-time-normal);
+}
+
+.close-btn:hover {
+    opacity: var(--opacity-transparancy-normal);
+    transition: var(--transition-time-normal);
 }
