@@ -33,6 +33,7 @@
     cursor: pointer;
     position: fixed;
     position-anchor: --carousel;
+    transition: var(--transition-time-normal) ease;
 }
 
 .carousel::scroll-button(right) {
@@ -49,7 +50,7 @@
 
 .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled,
 .carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
-    opacity: .5;
+    opacity: var(--opacity-transparancy-normal);
     cursor: pointer;
     transition: var(--transition-time-normal);
 }
@@ -104,6 +105,12 @@
     font-size: 40px;
     color: white;
     cursor: pointer;
+    transition: var(--transition-time-normal);
+}
+
+.close-btn:hover {
+    opacity: var(--opacity-transparancy-normal);
+    transition: var(--transition-time-normal);
 }
 
 /* for Handy */
@@ -138,6 +145,6 @@
     }
 
     .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
-        opacity: .5;
+        opacity: var(--opacity-transparancy-normal);
     }
 }
