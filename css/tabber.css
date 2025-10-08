@@ -1,0 +1,52 @@
+.tabber {
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+}
+
+.tab-buttons {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.tab-button {
+    flex: 1;
+    padding: .5em;
+    background: transparent;
+    border: none;
+    border-bottom: .1rem var(--color-accent) solid;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    color: var(--color-accent);
+    transition: var(--transition-time-normal) ease;
+}
+
+.tab-button:hover {
+    color: var(--color-text);
+    transition: var(--transition-time-normal) ease;
+}
+
+.tab-button.active {
+    color: var(--color-text);
+    border-color: var(--color-text);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+
+/* for Handy */
+@media(max-width: 700px) {
+    .tab-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

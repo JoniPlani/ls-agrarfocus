@@ -1,0 +1,81 @@
+.contact {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact label, .contact input, .contact select, .contact textarea {
+    display: block;
+    color: var(--color-text);
+    box-sizing: border-box;
+}
+
+.contact label {
+    margin-bottom: 0;
+}
+
+.contact input, .contact select, .contact textarea, .contact button[type="submit"] {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: .1rem var(--color-text) solid;
+    border-radius: var(--border-radius-normal);
+    height: 3rem;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    vertical-align: top;
+    padding: .5rem;
+    resize: none;
+    overflow: hidden;
+    accent-color: var(--color-text);
+    margin-top: 0;
+    transition: var(--transition-time-normal) ease;
+}
+
+.contact select:hover {
+    cursor: pointer;
+}
+
+.contact input[type="date"] {
+    cursor: text;
+}
+
+.contact button[type="submit"] {
+    background-color: var(--color-accent);
+    opacity: var(--opacity-transparancy-normal);
+    transition: var(--transition-time-normal) ease;
+}
+
+.contact button[type="submit"]:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: var(--transition-time-normal);
+}
+
+.contact .span-two {
+    grid-column: span 2;
+}
+
+.contact > div {
+    padding: .5rem;
+}
+
+.contact input:focus, .contact select:focus, .contact textarea:focus {
+    border-color: var(--color-accent);
+    transition: var(--transition-time-normal);
+}
+
+@media(max-width: 700px) {
+    .contact {
+        grid-template-columns: 100%;
+    }
+
+    .contact label, .contact input, .contact select, .contact textarea {
+        display: block;
+        width: 100%;
+    }
+
+    .contact .span-two {
+        grid-column: span 1;
+    }
+}
