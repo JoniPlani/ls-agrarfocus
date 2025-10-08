@@ -202,4 +202,9 @@ address {
     main {
         margin-top: 2em;
     }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
