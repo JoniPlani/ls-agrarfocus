@@ -35,6 +35,10 @@ main {
     margin-top: 3em;
 }
 
+small {
+    font-size: 0.75rem;
+}
+
 h1 {
     text-align: center;
     font-size: clamp(1.5rem, calc(5vw + 1rem), 4rem);
@@ -161,7 +165,7 @@ address {
     display: grid;
     margin: 0 10vw 0 10vw;
     box-sizing: border-box;
-    gap: 10vw;
+    gap: 5vw;
 }
 
 .half {
@@ -203,9 +207,7 @@ address {
         margin-top: 2em;
     }
 
-    img {
-        flex: 0 0 100%;
+    .thumbnail {
         width: 100%;
-        height: auto;
     }
 }
