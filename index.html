@@ -17,8 +17,8 @@
         
         <!-- header -->
         <header class="header">
-
-            <nav class="side-links">
+            
+            <nav class="site-links">
                 <a href="./index.html"><img src="./image/LSAF-Logo-782.png" alt="LSAF Logo" style="vertical-align: middle; padding-right: .1em;" loading="eager">Startseite</a>
                 <a href="./galerie.html">Galerie</a>
                 <a href="./kontakt.html">Kontakt</a>
@@ -34,12 +34,25 @@
             </nav>
 
         </header>
+        
+        <!-- side menu (mobile only) -->
+        <button class="sm-openBTN" id="sm-openBTN" onclick="openSideMenu()">☰</button>
+        <div class="side-menu" id="side-menu">
+            <button class="sm-closeBTN" id="sm-closeBTN" onclick="closeSideMenu()">&times;</button>
+
+            <nav class="site-links">
+                <a href="./index.html">Startseite</a><br>
+                <a href="./galerie.html">Galerie</a><br>
+                <a href="./kontakt.html">Kontakt</a><br>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+        </div>
 
         <!-- content -->
         <main>
 
             <!-- background -->
-            <div class="background"></div>
+            <div class="background" id="background"></div>
 
             <!-- Vorstellung -->
             <h1>Über mich</h1>
@@ -63,7 +76,7 @@
                     richtiger Ansprechpartner.
                 </p>
 
-                <img src="./image/about.jpg" alt="Lasse Szygulla" class="thumbnail" style="width: 60%; height: auto; margin: auto">
+                <img src="./image/about.jpg" alt="Lasse Szygulla" class="thumbnail" id="img-about">
 
             </div>
 
@@ -182,6 +195,19 @@
                     overlay.style.display = "none";
                 }
             });
+        </script>
+
+        <!-- side menu (mobile only) -->
+        <script>
+            function openSideMenu() {
+                document.getElementById("side-menu").style.width = "20em";
+                document.getElementById("side-menu").style.paddingLeft = "1em";
+            }
+
+            function closeSideMenu() {
+                document.getElementById("side-menu").style.width = "0";
+                document.getElementById("side-menu").style.paddingLeft = "0";
+            }
         </script>
 
     </body>
