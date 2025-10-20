@@ -119,10 +119,6 @@ address {
     font-size: clamp(.1rem, calc(1vw + .5rem), 2rem);;
 }
 
-.side-menu .site-links {
-    font-size: 1.5rem;
-}
-
 .site-links, .social-links {
     display: flex;
     gap: 1em;
@@ -199,6 +195,10 @@ address {
 .side-menu .site-links {
     flex-direction: column;
     gap: .05em;
+}
+
+.side-menu .site-links a {
+    font-size: 1.5rem;
 }
 
 .sm-openBTN, .sm-closeBTN {
