@@ -18,7 +18,7 @@
         <!-- header -->
         <header class="header">
 
-            <nav class="side-links">
+            <nav class="site-links">
                 <a href="./index.html"><img src="./image/LSAF-Logo-782.png" alt="LSAF Logo" style="vertical-align: middle; padding-right: .1em;" loading="eager">Startseite</a>
                 <a href="./galerie.html">Galerie</a>
                 <a href="./kontakt.html">Kontakt</a>
@@ -34,6 +34,19 @@
             </nav>
 
         </header>
+
+        <!-- side menu (mobile only) -->
+        <button class="sm-openBTN" id="sm-openBTN" onclick="openSideMenu()">☰</button>
+        <div class="side-menu" id="side-menu">
+            <button class="sm-closeBTN" id="sm-closeBTN" onclick="closeSideMenu()">&times;</button>
+
+            <nav class="site-links">
+                <a href="./index.html">Startseite</a><br>
+                <a href="./galerie.html">Galerie</a><br>
+                <a href="./kontakt.html">Kontakt</a><br>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+        </div>
 
         <!-- content -->
         <main>
@@ -97,23 +110,36 @@
 
             // click on each thumbnail
             thumbnails.forEach(thumbnail => {
-            thumbnail.addEventListener("click", () => {
-                overlay.style.display = "flex";
-                overlayImg.src = thumbnail.src;
-            });
+                thumbnail.addEventListener("click", () => {
+                    overlay.style.display = "flex";
+                    overlayImg.src = thumbnail.src;
+                });
             });
 
             // click X to close
             closeBtn.addEventListener("click", () => {
-            overlay.style.display = "none";
+                overlay.style.display = "none";
             });
 
             // click background to close
             overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-                overlay.style.display = "none";
-            }
+                if (e.target === overlay) {
+                    overlay.style.display = "none";
+                }
             });
+        </script>
+
+        <!-- side menu (mobile only) -->
+        <script>
+            function openSideMenu() {
+                document.getElementById("side-menu").style.width = "20em";
+                document.getElementById("side-menu").style.paddingLeft = "1em";
+            }
+
+            function closeSideMenu() {
+                document.getElementById("side-menu").style.width = "0";
+                document.getElementById("side-menu").style.paddingLeft = "0";
+            }
         </script>
 
     </body>
